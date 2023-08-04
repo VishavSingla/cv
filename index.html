@@ -1,64 +1,512 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Resume</title>
-<link rel="stylesheet" href="resume.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishav Singla - Resume Portfolio</title>
+  <!-- Add Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+ background-image: url('bg1.jpg');
+ color: #333;
+    }
+    #about {
+  color: ;
+}
+ #skills {
+  color: ;
+}
+
+    header {
+	  background: linear-gradient(to bottom, #007BFF, #001F3F); /* Apply higher contrast gradient background */
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+   nav {
+  background-color: transparent; /* Remove the red background color */
+  text-align: center;
+  padding: 1rem 0;
+  position: ;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Updated styling for navigation links (buttons) */
+nav a {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem; /* Adjust padding for button size */
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Slight scale-up on hover */
+}
+
+    section {
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom Styling */
+    .education-path {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .education-step {
+      flex: 1 1 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .education-step h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #007BFF;
+    }
+
+    .education-step p {
+      margin-top: 0;
+      color: #666;
+    }
+
+    .education-step .year {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .education-step .percentage {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #007BFF;
+      margin-top: 0.5rem;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 2rem;
+      background-color: #333;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .email {
+      font-size: 1.2rem;
+    }
+
+    .mobile {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #007BFF;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .skill-icon {
+      font-size: 50px;
+      color: #007BFF;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .skill-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .coding-languages {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .coding-language-icon {
+      font-size: 60px;
+      color: #007BFF;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .coding-language-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .skill-description {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: justify;
+    }
+
+    .certifications {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .certification-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .certification-name {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .projects {
+      margin-top: 2rem;
+    }
+
+    .project {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #007BFF;
+    }
+
+    .project p {
+      margin-top: 0;
+      color: #666;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+	.certification-image {
+      transition: transform 0.2s ease-in-out;
+      transform-origin: center center;
+	  width: 100%;
+	  length: 100%;
+    }
+
+    .certification-image:hover {
+      transform: scale(1.5); /* Increase the scale on hover */
+    }
+    /* Updated styling for navigation section on mobile */
+@media (max-width: 768px) {
+  nav {
+    background-color: ;
+    text-align: center;
+    padding: 1rem 0;
+    position: ;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav a {
+    display: ;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+}
+
+	
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Resume</h1>
-<hr>
-<div class="education">
-<h2>Education</h2>
-<h3>B.E. Electronics and Computer Engineering</h3>
-<p>Thapar Institute of Engineering and Technology</p>
-<p>2021-May 2025</p>
-<p>CGPA: 8.45</p>
-</div>
-<div class="technical-skills">
-<h2>Technical Skills</h2>
-<ul>
-<li>Frameworks: React, Next.js, Node, Express</li>
-<li>Programming Languages: Python, Java, C++, TypeScript, CSS</li>
-<li>Data Science: Numpy, Pandas, Matplotlib</li>
-<li>Databases: MongoDB, SQL</li>
-</ul>
-</div>
-<div class="projects">
-<h2>Projects</h2>
-<h3>Instagram Bot</h3>
-<p>Created a bot that performs automatic instagram actions using Python and Selenium</p>
-<p>Engaged with followers, followed targeted accounts, and extracted the lid of followers</p>
-<h3>Social Media Website</h3>
-<p>Built a social media website using React and styled with Tailwind CSS</p>
-<p>Implemented scalable and efficient handling of data, pooling, and communication</p>
-<p>Provided a seamless user experience and interaction</p>
-<h3>E-Commerce Application</h3>
-<p>Built an e-commerce application using React and Redux</p>
-<p>Integrated with NestJS, Prisma, and MySQL</p>
-<p>Improved search performance and implemented authentication and authorization</p>
-</div>
-<div class="courses">
-<h2>Courses</h2>
-<ul>
-<li>Full Stack Web Development</li>
-<li>Data Science and Machine Learning</li>
-<li>Database Management</li>
-</ul>
-</div>
-<div class="profiles">
-<h2>Profiles</h2>
-<ul>
-<li>GeeksforGeeks with 933 followers</li>
-</ul>
-</div>
-<div class="achievements">
-<h2>Achievements</h2>
-<ul>
-<li>Solved 500+ coding questions on HackerRank</li>
-<li>Ranked 250 out of approximately 400 students in GeeksforGeeks</li>
-</ul>
-</div>
-</div>
+  <header>
+  <h1>Vishav Singla</h1>
+   <h3>I'm a <span id="typing-text"></span></h3>
+    <br><br>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+ <section id="about">
+  <h2 style="text-align: center; font-size: 2.5rem;">About Me</h2>
+  <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+    <div style="display: flex; justify-content: space-between;">
+      <div style="flex: 1; margin-right: 2rem;">
+        <h5 style="font-size: 2rem; color: gold; margin-bottom: 1rem;">Welcome to My World of Creativity and Innovation!</h5>
+        <p style="font-size: 1.2rem; line-height: 1.6;">
+          <span style="font-weight: bold; color: ;">I'm Vishav Singla,</span> a passionate and driven Web Developer with an insatiable thirst for knowledge. I find joy in crafting digital experiences that not only look stunning but also leave a lasting impact on users. From the moment I wrote my first line of code, I knew I had found my calling - a magical realm where imagination meets technology, paving the way for exciting challenges and inspiring breakthroughs.
+        </p>
+      </div>
+      <div style="flex: 1; max-width: 300px;">
+        <img src="astitav.jpeg" alt="vishav-singla" style="width: 100%; border-radius: 50%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+      </div>
+    </div>
+    <p style="font-size: 1.2rem; line-height: 1.6;">
+      <span style="font-weight: bold; color: ;">Apart from coding,</span> I thrive in collaborative environments where creativity flows freely. I believe that the best solutions are born from collective minds, and I eagerly contribute my ideas while embracing the perspectives of others. My passion for teamwork is fueled by the satisfaction of witnessing our joint efforts blossom into awe-inspiring projects.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.6;">
+      <span style="font-weight: bold; color: ;">When I'm not immersed</span> in the world of development, you'll likely find me lost in a good book, exploring the outdoors with my camera, or experimenting with new recipes in the kitchen. I believe in maintaining a healthy work-life balance, as it allows me to recharge my creativity and bring fresh perspectives to my projects. My mission as a Web Developer is to create meaningful digital experiences that resonate with users and leave them with a smile. I'm driven by the belief that technology has the power to change lives and bring positive transformations to the world.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.6;">
+      Thank you for joining me on this incredible journey. Let's embark on an adventure together and turn visions into reality!
+    </p>
+  </div>
+</section>
+
+</section>
+
+  
+  <section id="education">
+    <h2 style="color:;">Education</h2>
+    <div class="education-path">
+      <!-- College Education -->
+      <div class="education-step">
+        <h3>Thapar University</h3>
+        <p>Bachelor of Engineering in Electronics and Computer Engineering</p>
+        <p class="year">2021 - 2025</p>
+        <p class="percentage">Percentage: 8.65</p>
+      </div>
+
+      <!-- School Education - 12th -->
+      <div class="education-step">
+        <h3>The Millennium School, Patiala</h3>
+        <p>Class 12th (CBSE)</p>
+        <p class="year">2020-2021</p>
+        <p class="percentage">Percentage: 89%</p>
+      </div>
+
+      <!-- School Education - 10th -->
+      <div class="education-step">
+        <h3>Kaintal School, Patiala</h3>
+        <p>Class 10th (ICSE)</p>
+        <p class="year">2018-2019</p>
+        <p class="percentage">Percentage: 95.2%</p>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <!-- < -->
+
+  <section id="projects">
+    <h2 style="color:gold;">Projects</h2>
+    <div class="projects">
+      <!-- Social Media Website project -->
+      <div class="project" style="background-color: #f9f9f9;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #007BFF;">Social Media Website</h3>
+        <p style="margin-top: 0; color: #666;">
+          Developed a responsive and user-friendly front-end in Next.js using React.js and Tailwind CSS, incorporating modern design principles.
+          Implemented a scalable and efficient back-end using Prisma and MongoDB, handling user data, posts, and comments.
+          Integrated various social media APIs to enable seamless sharing and interaction across platforms.
+          Implemented user authentication and authorization functionalities to ensure the security of user data.
+  
+          Language and Technologies Used: NextJS, ReactJS, Prisma, Tailwind CSS, MongoDB
+        </p>
+      </div>
+  
+      <!-- E-Commerce Application project -->
+      <div class="project" style="background-color: #f9f9f9;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #007BFF;">E-Commerce Application</h3>
+        <p style="margin-top: 0; color: #666;">
+          By implementing server-side rendering with Next.js, I ensured enhanced performance and improved search engine optimization (SEO).
+          Using React and Redux together provided a seamless state management system, enabling smooth data flow and enhancing user interactivity.
+          On the back-end, utilized Prisma to handle data retrieval, authentication, and external integrations with MySQL.
+          Integrated the Stripe API, a widely-used payment gateway, to enable secure and convenient payment processing on the website.
+  
+          Language and Technologies Used: NextJS, ReactJS, MySQL, TailwindCSS, Stripe
+        </p>
+      </div>
+  
+      <!-- Instagram Bot project -->
+      <div class="project" style="background-color: #f9f9f9;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #007BFF;">Instagram Bot</h3>
+        <p style="margin-top: 0; color: #666;">
+          The Instagram Bot project involved automating Instagram actions using Python and Selenium.
+          The bot performs various actions such as logging into Instagram, searching for a keyword, opening profiles, following/unfollowing users, liking/unliking posts, and extracting the list of followers.
+          Language and Technologies Used: Python, Selenium, Numpy, Pandas, Tableau
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills">
+    <h2 style="color: gold;">Technical Skills</h2>
+    <div class="coding-languages">
+      <i class="fab fa-html5 coding-language-icon"></i>
+      <i class="fab fa-css3-alt coding-language-icon"></i>
+      <i class="fab fa-js-square coding-language-icon"></i>
+      <i class="fab fa-python coding-language-icon"></i>
+      <!-- Add more coding language icons here -->
+    </div>
+    <ul class="skills-list">
+      <li><strong>Languages:</strong> Python, Java, C, C++, TypeScript, CSS</li>
+      <li><strong>Frameworks:</strong> ReactJS, NextJS, NodeJS, ExpressJS</li>
+      <li><strong>Data Science:</strong> Numpy, Pandas, Matplot, Selenium</li>
+      <li><strong>Databases:</strong> MongoDB, SQL</li>
+      <li><strong>Other Skills:</strong> Git, Github, Linux</li>
+    </ul>
+  </section>
+  
+  <style>
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .skills-list li {
+      margin-bottom: 10px;
+    }
+  
+    .skills-list li strong {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  </style>
+  
+
+
+  <section id="contact">
+    <h2 style="color:">Contact</h2>
+    <div class="contact-info">
+      <p class="email">Email: <a href="mailto:vishavsinglaofficial@gmail.com">vishavsinglaofficial@gmail.com</a></p>
+      <p class="mobile">Mobile: +91 7888560447</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://github.com/VishavSingla" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/vishav-singla/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/vishav-singla" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Vishav Singla | Web Developer</p>
+  </footer>
+
+  <!-- Add Font Awesome Script -->
+  <script>
+    const typingTextElement = document.getElementById("typing-text");
+    const textOptions = ["Web Developer", "Freelancer", "Data Science", "Machine Learning"];
+
+    function typeText(index) {
+      const text = textOptions[index];
+      let currentIndex = 0;
+
+      function type() {
+        typingTextElement.textContent = text.slice(0, currentIndex);
+        currentIndex++;
+
+        if (currentIndex <= text.length) {
+          setTimeout(type, 150); // Typing speed: Adjust the time delay here (in milliseconds)
+        } else {
+          setTimeout(() => {
+            typeText((index + 1) % textOptions.length);
+          }, 1000); // Delay before changing to the next text (in milliseconds)
+        }
+      }
+
+      type();
+    }
+
+    typeText(0); // Start the typing animation
+  </script>
 </body>
 </html>
